@@ -12,6 +12,7 @@
             --accent-cyan: #00f2fe;
             --text-main: #ffffff;
             --text-muted: #8f9cae;
+            --git-purple: #24292e;
         }
 
         body {
@@ -125,6 +126,30 @@
             box-shadow: 0 6px 20px rgba(0, 122, 255, 0.5);
         }
 
+        .btn-git {
+            display: inline-flex;
+            align-items: center;
+            background-color: #24292e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-git:hover {
+            background-color: #2f363d;
+        }
+
+        .btn-git svg {
+            margin-right: 8px;
+            fill: currentColor;
+        }
+
         footer {
             text-align: center;
             padding: 30px 20px;
@@ -166,11 +191,20 @@
         <div class="card">
             <h2>強大功能特色</h2>
             <ul class="features-list">
-                <li><strong>超低延遲渲染：</strong> 基於 SwiftUI 與 Core Bluetooth 底層架構優化，數據動態即時同步。</li>
+                <li><strong>超低延延迟渲染：</strong> 基於 SwiftUI 與 Core Bluetooth 底層架構優化，數據動態即時同步。</li>
                 <li><strong>賽車風格儀表：</strong> 融合前衛與極簡的美學設計，給您沉浸式的駕駛視覺體驗。</li>
                 <li><strong>實驗室模擬模式：</strong> 即使未連線實體硬體，也能一鍵開啟完整數據模擬供測試與展示。</li>
                 <li><strong>專屬 VIP 訂閱制：</strong> 解鎖更豐富的自訂儀表樣式與進階車輛感測器監控。</li>
             </ul>
+        </div>
+
+        <div class="card">
+            <h2>問題回報與建議 (Issues)</h2>
+            <p>在使用 BimmerDash 的過程中有遇到任何 Bug，或是希望加入新的動態儀表功能嗎？歡迎點擊下方按鈕前往 GitHub 社群提交 Issues，讓我們一起把 BimmerDash 變得更好！</p>
+            <a href="https://github.com/nekohararin/BimmerDash/issues" target="_blank" class="btn-git">
+                <svg height="20" viewBox="0 0 16 16" width="20"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                回報應用程式問題 (Report an Issue)
+            </a>
         </div>
     </div>
 
@@ -178,6 +212,7 @@
         <p>Copyright &copy; 2026 ChunYi. All rights reserved.</p>
         <p>
             <a href="https://www.instagram.com/rin_nekohara/" target="_blank">聯絡支援 (Support)</a> | 
+            <a href="https://github.com/nekohararin/BimmerDash" target="_blank">GitHub 專案庫</a> |
             <a href="#">隱私權政策 (Privacy Policy)</a>
         </p>
     </footer>
