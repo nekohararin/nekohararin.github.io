@@ -3,32 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的第一個 GitHub 網站！</title>
+    <title>BimmerDash - 專為愛車打造的實時動態儀表</title>
     <style>
+        :root {
+            --bg-color: #0d0f12;
+            --card-bg: #161a22;
+            --accent-blue: #007aff;
+            --accent-cyan: #00f2fe;
+            --text-main: #ffffff;
+            --text-muted: #8f9cae;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between;
         }
-        .container {
+
+        .hero-section {
             text-align: center;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 80px 20px 40px 20px;
+            background: radial-gradient(circle at top, rgba(0, 122, 255, 0.15) 0%, transparent 60%);
         }
-        h1 { color: #333; }
-        p { color: #666; }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            border-radius: 20px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 10px 0;
+            font-weight: 800;
+            background: linear-gradient(135deg, #fff 30%, var(--text-muted));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-cyan);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px 60px 20px;
+            flex-grow: 1;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-top: 0;
+            color: var(--text-main);
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 12px;
+        }
+
+        p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .features-list {
+            padding-left: 20px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        .features-list li::marker {
+            color: var(--accent-cyan);
+        }
+
+        .btn-store {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-blue), #0056b3);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+            margin-top: 10px;
+        }
+
+        .btn-store:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 122, 255, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            font-size: 0.8rem;
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🎉 恭喜你！網站架設成功了！</h1>
-        <p>這是我在 GitHub Pages 上建立的第一個個人網站。</p>
+
+    <div class="hero-section">
+        <div class="logo-placeholder">BD</div>
+        <h1>BimmerDash</h1>
+        <div class="subtitle">Real-time OBDII Gauge & Monitor</div>
+        <a href="#" class="btn-store">Download on the App Store</a>
     </div>
+
+    <div class="container">
+        <div class="card">
+            <h2>關於 BimmerDash</h2>
+            <p>BimmerDash 是一款專為汽車愛好者打造的強大實時車輛數據監測 App。透過外接低功耗藍牙 (BLE) OBD-II 適配器，能精準讀取車輛 ECU 數據，並以極具科技感的流暢動畫，將引擎轉速、時速、油溫等核心參數完美呈現於您的 iPhone 螢幕上。</p>
+        </div>
+
+        <div class="card">
+            <h2>強大功能特色</h2>
+            <ul class="features-list">
+                <li><strong>超低延遲渲染：</strong> 基於 SwiftUI 與 Core Bluetooth 底層架構優化，數據動態即時同步。</li>
+                <li><strong>賽車風格儀表：</strong> 融合前衛與極簡的美學設計，給您沉浸式的駕駛視覺體驗。</li>
+                <li><strong>實驗室模擬模式：</strong> 即使未連線實體硬體，也能一鍵開啟完整數據模擬供測試與展示。</li>
+                <li><strong>專屬 VIP 訂閱制：</strong> 解鎖更豐富的自訂儀表樣式與進階車輛感測器監控。</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2026 ChunYi. All rights reserved.</p>
+        <p>
+            <a href="https://www.instagram.com/rin_nekohara/" target="_blank">聯絡支援 (Support)</a> | 
+            <a href="#">隱私權政策 (Privacy Policy)</a> | 
+            <a href="app-ads.txt" target="_blank">Authorized Digital Sellers (app-ads.txt)</a>
+        </p>
+    </footer>
+
 </body>
 </html>
