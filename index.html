@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BimmerDash - Real-time OBDII Gauge & Monitor</title>
+    <title>ChunYi | BimmerDash Project</title>
     <style>
         :root {
             --bg-color: #0d0f12;
@@ -12,7 +12,6 @@
             --accent-cyan: #00f2fe;
             --text-main: #ffffff;
             --text-muted: #8f9cae;
-            --git-purple: #24292e;
         }
 
         body {
@@ -24,50 +23,61 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            justify-content: space-between;
         }
 
         .hero-section {
             text-align: center;
             padding: 80px 20px 40px 20px;
-            background: radial-gradient(circle at top, rgba(0, 122, 255, 0.15) 0%, transparent 60%);
+            background: radial-gradient(circle at top, rgba(0, 122, 255, 0.12) 0%, transparent 60%);
         }
 
-        .logo-placeholder {
-            width: 80px;
-            height: 80px;
+        .avatar-placeholder {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
             background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
-            border-radius: 20px;
             margin: 0 auto 20px auto;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+            box-shadow: 0 0 20px rgba(0, 122, 255, 0.3);
             font-weight: bold;
-            font-size: 28px;
+            font-size: 24px;
             letter-spacing: 1px;
         }
 
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin: 0 0 10px 0;
             font-weight: 800;
-            background: linear-gradient(135deg, #fff 30%, var(--text-muted));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.5px;
         }
 
         .subtitle {
-            font-size: 1.1rem;
+            font-size: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .tag-container {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
             color: var(--accent-cyan);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 30px;
-            font-weight: 600;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 750px;
             margin: 0 auto;
             padding: 0 20px 60px 20px;
             flex-grow: 1;
@@ -75,19 +85,26 @@
 
         .card {
             background-color: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.03);
             border-radius: 16px;
-            padding: 30px;
+            padding: 28px;
             margin-bottom: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         h2 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             margin-top: 0;
             color: var(--text-main);
-            border-left: 4px solid var(--accent-blue);
-            padding-left: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2::before {
+            content: "///";
+            color: var(--accent-blue);
+            font-weight: 800;
+            letter-spacing: -1px;
         }
 
         p {
@@ -96,124 +113,116 @@
             font-size: 0.95rem;
         }
 
-        .features-list {
-            padding-left: 20px;
-            color: var(--text-muted);
-            line-height: 1.8;
-            font-size: 0.95rem;
-        }
-
-        .features-list li::marker {
-            color: var(--accent-cyan);
-        }
-
-        .btn-store {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--accent-blue), #0056b3);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
+        .tech-stack {
             font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
-            margin-top: 10px;
+            color: var(--text-main);
         }
 
-        .btn-store:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 122, 255, 0.5);
-        }
-
-        .btn-git {
+        .btn-link {
             display: inline-flex;
             align-items: center;
-            background-color: #24292e;
+            background-color: rgba(255, 255, 255, 0.05);
             color: white;
-            padding: 10px 20px;
+            padding: 10px 18px;
             border-radius: 8px;
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: 600;
-            margin-top: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: background-color 0.2s ease;
+            margin-top: 10px;
+            margin-right: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.2s ease;
         }
 
-        .btn-git:hover {
-            background-color: #2f363d;
+        .btn-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: var(--accent-cyan);
         }
 
-        .btn-git svg {
+        .btn-link.primary {
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.2), rgba(0, 242, 254, 0.1));
+            border-color: rgba(0, 122, 255, 0.4);
+        }
+
+        .btn-link.primary:hover {
+            border-color: var(--accent-cyan);
+            background: linear-gradient(135deg, rgba(0, 122, 255, 0.3), rgba(0, 242, 254, 0.2));
+        }
+
+        .btn-link svg {
             margin-right: 8px;
             fill: currentColor;
         }
 
         footer {
             text-align: center;
-            padding: 30px 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            background-color: rgba(0, 0, 0, 0.2);
-        }
-
-        footer p {
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
             font-size: 0.8rem;
-            margin: 5px 0;
+            color: var(--text-muted);
         }
 
         footer a {
-            color: var(--accent-cyan);
+            color: var(--text-muted);
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 8px;
         }
 
         footer a:hover {
-            text-decoration: underline;
+            color: var(--accent-cyan);
         }
     </style>
 </head>
 <body>
 
     <div class="hero-section">
-        <div class="logo-placeholder">BD</div>
-        <h1>BimmerDash</h1>
-        <div class="subtitle">Real-time OBDII Gauge & Monitor</div>
-        <a href="https://apps.apple.com/us/app/bimmerdash-obd2-gauge/id6781128254" class="btn-store">Download on the App Store</a>
+        <!-- 這裡可以用你貓咪的縮寫或是像舊版一樣，但我改成個人感更重的設計 -->
+        <div class="avatar-placeholder">CY</div>
+        <h1>Hi, I'm ChunYi</h1>
+        <div class="subtitle">iOS Developer & Automotive Enthusiast</div>
+        
+        <div class="tag-container">
+            <span class="tag">SwiftUI</span>
+            <span class="tag">Core Bluetooth</span>
+            <span class="tag">OBD-II Telemetry</span>
+            <span class="tag">BMW F22 / iX1 Owner</span>
+        </div>
     </div>
 
     <div class="container">
         <div class="card">
-            <h2>About BimmerDash</h2>
-            <p>BimmerDash is a powerful real-time vehicle data monitoring app designed specifically for automotive enthusiasts. By connecting to an external Low Energy Bluetooth (BLE) OBD-II adapter, it precisely reads vehicle ECU telemetry. With stunningly smooth, futuristic animations, it perfectly showcases core parameters like RPM, speed, and oil temperature right on your iPhone screen.</p>
+            <h2>About Me & The Project</h2>
+            <p>I'm a software developer who happens to spend way too much time thinking about cars. As a Bimmer owner, I always wanted a clean, futuristic dashboard display that could talk to my car's ECU without any clutter. That curiosity turned into <strong>BimmerDash</strong>—a pet project built entirely out of passion.</p>
+            <p>It's an iOS app designed to bridge your iPhone and an OBD-II BLE adapter, rendering crisp, ultra-low latency real-time gauges like RPM, speed, and oil temperature with fluid animations.</p>
         </div>
 
         <div class="card">
-            <h2>Key Features</h2>
-            <ul class="features-list">
-                <li><strong>Ultra-Low Latency Rendering:</strong> Optimized with SwiftUI and Core Bluetooth framework for instant, real-time data synchronization.</li>
-                <li><strong>Racing-Inspired Dashboard:</strong> Merges cutting-edge and minimalist aesthetics to deliver an immersive visual driving experience.</li>
-                <li><strong>Demo Mode:</strong> Test and showcase full data simulations with a single tap, even without hardware connected.</li>
-                <li><strong>Premium VIP Subscription:</strong> Unlock a richer selection of customizable gauge styles and advanced vehicle sensor monitoring.</li>
-            </ul>
+            <h2>Behind the Code</h2>
+            <p>This project was a fun playground for me to push <span class="tech-stack">SwiftUI</span> and the <span class="tech-stack">Core Bluetooth framework</span> to their limits, ensuring the gauge data streams seamlessly with minimal latency. There is also a built-in data simulation mode so I could test and debug the UI layouts comfortably at my desk without freezing inside the garage.</p>
+            
+            <a href="https://apps.apple.com/us/app/bimmerdash-obd2-gauge/id6781128254" target="_blank" class="btn-link primary">
+                View on App Store
+            </a>
+            <a href="https://github.com/nekohararin/BimmerDash" target="_blank" class="btn-link">
+                <svg height="18" viewBox="0 0 16 16" width="18"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                Source Code
+            </a>
         </div>
 
         <div class="card">
-            <h2>Feedback & Suggestions (Issues)</h2>
-            <p>Encountered a bug while using BimmerDash, or want to request a new dynamic gauge style? We'd love to hear from you! Click the button below to submit an issue on GitHub and join us in making BimmerDash even better.</p>
-            <a href="https://github.com/nekohararin/BimmerDash/issues" target="_blank" class="btn-git">
-                <svg height="20" viewBox="0 0 16 16" width="20"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
-                Report an Issue
+            <h2>Let's Connect</h2>
+            <p>Since this is a hobby project, I'm always open to feedback, feature ideas, or just chatting about iOS development and cars. If you run into any issues or want to request a specific gauge style, feel free to open an issue on the GitHub repository.</p>
+            <a href="https://github.com/nekohararin/BimmerDash/issues" target="_blank" class="btn-link">
+                Open an Issue
             </a>
         </div>
     </div>
 
     <footer>
-        <p>Copyright &copy; 2026 ChunYi. All rights reserved.</p>
+        <p>&copy; 2026 ChunYi. Built with passion for the Bimmer community.</p>
         <p>
-            <a href="https://www.instagram.com/rin_nekohara/" target="_blank">Support</a> | 
-            <a href="https://github.com/nekohararin/BimmerDash" target="_blank">GitHub Repository</a> |
-            <a href="#">Privacy Policy</a>
+            <a href="https://www.instagram.com/rin_nekohara/" target="_blank">Instagram</a> | 
+            <a href="https://github.com/nekohararin" target="_blank">GitHub</a>
         </p>
     </footer>
 
