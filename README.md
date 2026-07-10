@@ -1,7 +1,6 @@
 # Hi, I'm Nekohara
 
-I'm a software developer driven by curiosity, passion, and the joy of crafting clean, user-centric experiences. When I'm not staring at Swift code or debugging Bluetooth packages, you can usually find me hunting for the perfect racing line or capturing snippets of daily life.
-
+I'm a software developer driven by curiosity, passion, and the joy of crafting clean, user-centric experiences. When I'm not staring at Swift code, you can usually find me hunting for the perfect driving line or capturing snippets of daily life.
 ---
 
 ### 🛠️ What I'm Working On
@@ -25,7 +24,7 @@ I believe machines have souls, and every car tells a story. Here's the journey t
 
 ### 🐈 The CEO of My Workspace
 
-If you look closely at my avatar, that's my **Calico cat**. She was "dispatched" to my home about a year ago after being rescued as a newborn from a friend's factory. She currently oversees all code commits and ensures my desk chair is never left unoccupied.
+My Calico cat. She was "dispatched" to my home about a year ago after being rescued as a newborn from a friend's factory. She currently oversees all code commits and ensures my desk chair is never left unoccupied.
 
 ---
 
