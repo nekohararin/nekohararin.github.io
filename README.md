@@ -25,6 +25,7 @@ I believe machines have souls, and every car tells a story. Here's the journey t
 ### 🐈 The CEO of My Workspace
 
 My Calico cat. She was "dispatched" to my home about a year ago after being rescued as a newborn from a friend's factory. She currently oversees all code commits and ensures my desk chair is never left unoccupied.
+<img width="640" height="480" alt="IMG_5122" src="https://github.com/user-attachments/assets/a6007e32-731f-4d26-bf2a-faac2c7e3128" />
 
 ---
 
