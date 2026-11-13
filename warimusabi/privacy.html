@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — WariMusubi (割り結び)</title>
+  <meta name="description"
+    content="Privacy Policy for WariMusubi (割り結び), an offline-first travel expense splitting iOS application.">
+  <style>
+    :root {
+      --bg: #FAF8F5;
+      --bg-secondary: #F2EFE9;
+      --surface: #FFFFFF;
+      --text: #2D2B29;
+      --text-muted: #665F56;
+      --primary: #4F684E;
+      --primary-dark: #394B38;
+      --border: #E5E0D8;
+      --shadow: 0 6px 24px rgba(45, 43, 41, 0.05);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #171817;
+        --bg-secondary: #222422;
+        --surface: #2A2C2A;
+        --text: #F2EFE9;
+        --text-muted: #B3ADA2;
+        --primary: #8FB28D;
+        --primary-dark: #B2CBB0;
+        --border: #363936;
+        --shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 36px 16px 64px;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Hiragino Sans", sans-serif;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      font-family: "New York", "Hiragino Mincho ProN", Georgia, serif;
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      margin: 0 0 4px;
+    }
+
+    .subtitle {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px 26px;
+      box-shadow: var(--shadow);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin: 0 0 6px;
+      color: var(--text);
+    }
+
+    .meta {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0 0 22px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h2 {
+      font-size: 1.08rem;
+      margin: 24px 0 8px;
+      color: var(--primary-dark);
+    }
+
+    p {
+      margin: 0 0 12px;
+      color: var(--text);
+    }
+
+    ul {
+      margin: 0 0 14px;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .highlight-box {
+      background: var(--bg-secondary);
+      border-left: 3px solid var(--primary);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin: 14px 0 18px;
+      font-size: 0.95rem;
+    }
+
+    a {
+      color: var(--primary);
+      text-underline-offset: 3px;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.88em;
+      background: var(--bg-secondary);
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 540px) {
+      .card {
+        padding: 22px 18px;
+        border-radius: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <p class="brand">🎋 WariMusubi（割り結び）</p>
+      <p class="subtitle">Privacy Policy</p>
+    </header>
+
+    <main class="card">
+      <h1>Privacy Policy</h1>
+      <p class="meta">Effective Date: November 14, 2026</p>
+
+      <div class="highlight-box">
+        <strong>Summary:</strong> WariMusubi does not require an account, does not display ads, does not include
+        analytics or tracking SDKs, and does not collect or sell your personal data. All trip and expense records stay
+        locally on your device.
+      </div>
+
+      <h2>1. Data We Collect</h2>
+      <p>We do <strong>not</strong> collect, store, or transmit any personal data to developer-operated servers. Under
+        App Store privacy disclosures, WariMusubi operates as <strong>Data Not Collected</strong>.</p>
+
+      <h2>2. Local On-Device Storage</h2>
+      <p>All content you create in WariMusubi is stored exclusively on your iOS device:</p>
+      <ul>
+        <li><strong>Trip &amp; Ledger Data (Apple SwiftData):</strong> Trip titles, companion names and avatar colors,
+          expenses, notes, custom split allocations, settlement records, and saved exchange rate snapshots.</li>
+        <li><strong>App Preferences (UserDefaults):</strong> Your chosen in-app display language and up to 6 recently
+          selected currency codes for quick input.</li>
+      </ul>
+
+      <h2>3. Optional Network Requests &amp; Third-Party Services</h2>
+      <p>WariMusubi works offline for expense tracking, splitting, manual exchange rates, and settlement calculation.
+      </p>
+      <p>An outbound HTTPS request occurs <strong>only</strong> when you explicitly tap <strong>Fetch Latest
+          Rates</strong> inside the Exchange Rate sheet:</p>
+      <ul>
+        <li><strong>Service Provider:</strong> <a href="https://www.exchangerate-api.com" target="_blank"
+            rel="noopener noreferrer">Rates By Exchange Rate API</a>
+          (<code>https://open.er-api.com/v6/latest/{BASE_CURRENCY}</code>).</li>
+        <li><strong>Data Sent:</strong> Only the trip's base currency code (for example, <code>TWD</code> or
+          <code>JPY</code>). Your trip names, companion names, expense amounts, and notes are never sent.
+        </li>
+        <li><strong>Server Logs:</strong> As with any standard HTTPS request, the third-party API provider receives
+          standard connection metadata (such as your IP address) to deliver the exchange rate response. Please refer to
+          ExchangeRate-API's own terms and privacy policy for details.</li>
+      </ul>
+      <p><em>Disclaimer:</em> Fetched reference exchange rates are for trip expense splitting estimates only; actual
+        charges depend on your card issuer or currency exchange provider.</p>
+
+      <h2>4. Sharing &amp; Clipboard</h2>
+      <p>When you tap <strong>Copy Report</strong> or <strong>Share</strong>, WariMusubi writes the formatted settlement
+        summary to your device clipboard or passes it to the iOS share sheet for apps you choose. No data is shared
+        automatically.</p>
+
+      <h2>5. Data Retention &amp; Deletion</h2>
+      <p>You have full control over your data at all times. You may edit or delete trips, companions, expenses, or
+        settled records directly inside the app, or remove all stored app data by uninstalling WariMusubi from your
+        device.</p>
+
+      <h2>6. Children's Privacy</h2>
+      <p>WariMusubi does not knowingly collect personal information from children or any users.</p>
+
+      <h2>7. Changes to This Policy</h2>
+      <p>If future versions introduce features that change how data is handled (for example, optional iCloud
+        synchronization), we will update this page and revise the effective date accordingly.</p>
+
+      <h2>8. Contact</h2>
+      <p>If you have any questions about this Privacy Policy, please contact the developer at: <a
+          href="mailto:bimmerdash.help@icloud.com">bimmerdash.help@icloud.com</a></p>
+    </main>
+
+    <footer>
+      <p>© 2026 WariMusubi (割り結び)</p>
+    </footer>
+  </div>
+</body>
+
+</html>
